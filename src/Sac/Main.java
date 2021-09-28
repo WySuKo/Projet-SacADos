@@ -22,7 +22,7 @@ public class Main {
             String[] caracs = line.split(";");
             for(String carac1 : caracs) {
                 out.println(carac1);
-                in.add(new Objet(caracs[0], Float.parseFloat(caracs[1]), Float.parseFloat(caracs[2])));
+                //line.add(new Objet(caracs[0], Float.parseFloat(caracs[1]), Float.parseFloat(caracs[2])));
 
             }
         }
