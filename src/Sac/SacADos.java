@@ -17,10 +17,5 @@ public class SacADos {
         ArrayList<Objet> Objets = new ArrayList<Objet>();
     }
 
-    public String toString(){
 
-    }
-
-    public String getObjet(){
-    }
 }
