@@ -1,36 +1,28 @@
 package Sac;
 import Sac.*;
 import java.util.*;
+import static java.util.Collections.*;
 
 public class Glouton {
 
     public float rapport (Objet obj){
         return obj.getValeur()/obj.getPoids();
     }
-/*
 
- */
-    public void quicksort(ArrayList<Objet> objets, int i, int j){
-        // A utility function to swap two elements
-            int temp = objets[i];
-            objets[i] = objets[j];
-            objets[j] = temp;
-        }
-
- /*This function takes last element as pivot, places
-   the pivot element at its correct position in sorted
-   array, and places all smaller (smaller than pivot)
-   to left of pivot and all greater elements to right
-   of pivot */
-        static int partition(int[] arr, int low, int high)
+ /*Cette fonction prend le dernier élément comme pivot, place
+   l'élément de pivot à sa position correcte dans le tableau trié
+   , et place tous les plus petits (plus petit que pivot)
+   à gauche du pivot et tous les plus grands éléments à droite
+   de pivot */
+        public int partition(ArrayList<Objet> objets, int low, int high)
         {
 
             // pivot
-            int pivot = arr[high];
+            Objet pivot = objets.get(high);
 
-            // Index of smaller element and
-            // indicates the right position
-            // of pivot found so far
+            // Index du plus petit élément
+            // et indique la bonne position
+            // du pivot trouvé jusqu'à présent
             int i = (low - 1);
 
             for(int j = low; j <= high - 1; j++)
@@ -38,16 +30,16 @@ public class Glouton {
 
                 // If current element is smaller
                 // than the pivot
-                if (arr[j] < pivot)
+                if (objets[j] < pivot)
                 {
 
                     // Increment index of
                     // smaller element
                     i++;
-                    swap(arr, i, j);
+                    swap(objets, i, j);
                 }
             }
-            swap(arr, i + 1, high);
+            swap(objets, i + 1, high);
             return (i + 1);
         }
 
@@ -56,7 +48,7 @@ public class Glouton {
           low --> Starting index,
           high --> Ending index
  */
-        static void quickSort(int[] arr, int low, int high)
+        public void quickSort(int[] arr, int low, int high)
         {
             if (low < high)
             {
@@ -73,24 +65,11 @@ public class Glouton {
         }
 
 // Function to print an array
-        static void printArray(int[] arr, int size)
+        public void printArray(int[] arr, int size)
         {
             for(int i = 0; i < size; i++)
                 System.out.print(arr[i] + " ");
 
             System.out.println();
         }
-
-// Driver Code
-        public static void main(String[] args)
-        {
-            int[] arr = { 10, 7, 8, 9, 1, 5 };
-            int n = arr.length;
-
-            quickSort(arr, 0, n - 1);
-            System.out.println("Sorted array: ");
-            printArray(arr, n);
-        }
     }
-
-}
