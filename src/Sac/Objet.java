@@ -32,4 +32,8 @@ public class Objet {
     public void setEstDedans(boolean estDedans) {
         this.estDedans = estDedans;
     }
+
+    public String toString(){
+        return this.nom + " ; " + this.poids + " ; " + this.valeur;
+    }
 }

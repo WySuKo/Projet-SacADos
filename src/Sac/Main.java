@@ -8,26 +8,21 @@ import java.util.Scanner;
 import static java.lang.System.*;
 
 public class Main {
-        ArrayList<Objet> in = new ArrayList<Objet>();
+    static ArrayList<Objet> in = new ArrayList<Objet>();
 
     public static void main(String[] args) {
+        SacADos SAC = new SacADos("cccc", 20.0f);
         Scanner scan = null;
         try {
             scan = new Scanner(new File("Items.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        while(scan.hasNextLine()) {
+        while (scan.hasNextLine()) {
             String line = scan.nextLine();
             String[] caracs = line.split(";");
-            for(String carac1 : caracs) {
-                out.println(carac1);
-                //line.add(new Objet(caracs[0], Float.parseFloat(caracs[1]), Float.parseFloat(caracs[2])));
-
-            }
+                SAC.Objets.add(new Objet(caracs[0], Float.parseFloat(caracs[1]), Float.parseFloat(caracs[2])));
         }
+            out.println(SAC.toString());
     }
-
-
-
 }

@@ -13,7 +13,7 @@ public class Glouton {
    l'élément de pivot à sa position correcte dans le tableau trié
    , et place tous les plus petits (plus petit que pivot)
    à gauche du pivot et tous les plus grands éléments à droite
-   de pivot */
+   de pivot
         public int partition(ArrayList<Objet> objets, int low, int high)
         {
 
@@ -43,12 +43,12 @@ public class Glouton {
             return (i + 1);
         }
 
-/* The main function that implements QuickSort
+ The main function that implements QuickSort
           arr[] --> Array to be sorted,
           low --> Starting index,
           high --> Ending index
- */
-        public void quickSort(int[] arr, int low, int high)
+
+        /*public void quickSort(int[] arr, int low, int high)
         {
             if (low < high)
             {
@@ -72,4 +72,6 @@ public class Glouton {
 
             System.out.println();
         }
+
+  */
     }
