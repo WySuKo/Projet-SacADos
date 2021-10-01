@@ -1,10 +1,14 @@
 package Sac;
 
+import java.util.ArrayList;
+
 public class Objet {
     private String nom;
     private float poids;
     private float valeur;
     private boolean estDedans;
+
+    public static ArrayList<Objet> Objets = new ArrayList<Objet>();
 
     public Objet(String n, float p, float v){
         this.nom = n;
