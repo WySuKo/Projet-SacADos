@@ -8,7 +8,6 @@ import java.util.Scanner;
 import static java.lang.System.*;
 
 public class Main {
-    static ArrayList<Objet> in = new ArrayList<Objet>();
 
     public static void main(String[] args) {
         SacADos SAC = new SacADos("cccc", 20.0f);
@@ -21,8 +20,10 @@ public class Main {
         while (scan.hasNextLine()) {
             String line = scan.nextLine();
             String[] caracs = line.split(";");
-                SAC.Objets.add(new Objet(caracs[0], Float.parseFloat(caracs[1]), Float.parseFloat(caracs[2])));
+            SAC.getObjets().add(new Objet(caracs[0], Float.parseFloat(caracs[1]), Float.parseFloat(caracs[2])));
         }
-            out.println(SAC.toString());
+        out.println(SAC.toString());
+
+
     }
 }

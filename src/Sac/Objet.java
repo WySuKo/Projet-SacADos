@@ -38,6 +38,6 @@ public class Objet {
     }
 
     public String toString(){
-        return this.nom + " ; " + this.poids + " ; " + this.valeur;
+        return this.nom + "; " + this.poids + " ; " + this.valeur;
     }
 }
