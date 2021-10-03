@@ -13,7 +13,7 @@ public class Glouton {
    l'élément de pivot à sa position correcte dans le tableau trié
    , et place tous les plus petits (plus petit que pivot)
    à gauche du pivot et tous les plus grands éléments à droite
-   de pivot
+   de pivot*/
         public int partition(ArrayList<Objet> objets, int low, int high)
         {
 
@@ -30,7 +30,7 @@ public class Glouton {
 
                 // If current element is smaller
                 // than the pivot
-                if (objets[j] < pivot)
+                if (Sac.Objets[j] < pivot)
                 {
 
                     // Increment index of
@@ -43,10 +43,10 @@ public class Glouton {
             return (i + 1);
         }
 
- The main function that implements QuickSort
+ /*The main function that implements QuickSort
           arr[] --> Array to be sorted,
           low --> Starting index,
-          high --> Ending index
+          high --> Ending index*/
 
         /*public void quickSort(int[] arr, int low, int high)
         {
