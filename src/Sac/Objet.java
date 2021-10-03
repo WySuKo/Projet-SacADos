@@ -6,6 +6,7 @@ public class Objet {
     private String nom;
     private float poids;
     private float valeur;
+    private float rapport;
     private boolean estDedans;
 
     public static ArrayList<Objet> Objets = new ArrayList<Objet>();
@@ -14,23 +15,28 @@ public class Objet {
         this.nom = n;
         this.poids = p;
         this.valeur = v;
+        this.rapport = v / p;
         this.estDedans = false;
     }
 
     public String getNom() {
-        return nom;
+        return this.nom;
+    }
+
+    public float getRapport(){
+        return this.rapport;
     }
 
     public float getPoids() {
-        return poids;
+        return this.poids;
     }
 
     public float getValeur() {
-        return valeur;
+        return this.valeur;
     }
 
     public boolean isEstDedans() {
-        return estDedans;
+        return this.estDedans;
     }
 
     public void setEstDedans(boolean estDedans) {
