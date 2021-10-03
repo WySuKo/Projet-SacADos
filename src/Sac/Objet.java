@@ -6,16 +6,15 @@ public class Objet {
     private String nom;
     private float poids;
     private float valeur;
-    private float rapport;
     private boolean estDedans;
-
+    private float rapport;
     public static ArrayList<Objet> Objets = new ArrayList<Objet>();
 
     public Objet(String n, float p, float v){
         this.nom = n;
         this.poids = p;
         this.valeur = v;
-        this.rapport = v / p;
+        this.rapport = v/p;
         this.estDedans = false;
     }
 
@@ -23,8 +22,8 @@ public class Objet {
         return this.nom;
     }
 
-    public float getRapport(){
-        return this.rapport;
+    public float getRapport() {
+        return rapport;
     }
 
     public float getPoids() {
@@ -46,4 +45,6 @@ public class Objet {
     public String toString(){
         return this.nom + "; " + this.poids + " ; " + this.valeur;
     }
+
+
 }
