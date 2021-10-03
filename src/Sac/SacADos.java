@@ -3,7 +3,7 @@ package Sac;
 import java.util.*;
 
 public class SacADos {
-    public ArrayList<Objet> Objets;
+    private ArrayList<Objet> Objets;
     private float poidsMax;
     private String chemin;
 
