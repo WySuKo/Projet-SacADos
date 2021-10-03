@@ -2,7 +2,7 @@ package Sac;
 
 import java.util.*;
 
-public class SacADos implements Resolution{
+public class SacADos {
     public ArrayList<Objet> Objets;
     private float poidsMax;
     private String chemin;
