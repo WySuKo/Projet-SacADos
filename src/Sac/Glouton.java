@@ -8,7 +8,7 @@ public class Glouton  {
     public Glouton(){
 
     }
-    public void Glouton(SacADos sac){
+    public void AlgoGlouton(SacADos sac){
         int somme = 0;
         Collections.sort(Objet.Objets, new Comparateur()); // Objets = Arraylist static d'objets attrapé dans le fichier.txt
         for (int i = 0 ; i < Objet.Objets.size() ; i++){

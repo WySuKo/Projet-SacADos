@@ -28,7 +28,7 @@ public class Main {
         //Collections.sort(SAC.getObjets(), new Comparateur());
         //out.println(SAC.getObjets());
         //out.println(Objet.Objets);
-        Algo.Glouton(SAC);
+        Algo.AlgoGlouton(SAC);
         out.println(SAC.toString());
     }
 }
