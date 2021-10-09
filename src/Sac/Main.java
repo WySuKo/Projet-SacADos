@@ -11,11 +11,12 @@ import static java.lang.System.*;
 public class Main {
 
     public static void main(String[] args) {
-        SacADos SAC = new SacADos("cccc", 5.0f);
+        SacADos SAC = new SacADos("cccc", 12.0f);
         Glouton Algo = new Glouton();
+        Dynamique Alg = new Dynamique();
         Scanner scan = null;
         try {
-            scan = new Scanner(new File("Items.txt"));
+            scan = new Scanner(new File("SacDynamique.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -28,7 +29,7 @@ public class Main {
         //Collections.sort(SAC.getObjets(), new Comparateur());
         //out.println(SAC.getObjets());
         //out.println(Objet.Objets);
-        Algo.AlgoGlouton(SAC);
+        Alg.AlgoDynamique(SAC);
         out.println(SAC.toString());
     }
 }
