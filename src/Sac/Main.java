@@ -28,7 +28,16 @@ public class Main {
         //Collections.sort(SAC.getObjets(), new Comparateur());
         //out.println(SAC.getObjets());
         //out.println(Objet.Objets);
-        Algo.Glouton(SAC);
-        out.println(SAC.toString());
+        //Algo.Glouton(SAC);
+        //out.println(SAC.getObjets());
+        //out.println(SAC.toString());
+        //out.println(Objet.Objets);
+        //Algo.triRapide(Objet.Objets);
+        out.println(Objet.Objets);
+        //Algo.echanger(Objet.Objets, Objet.Objets.get(0), Objet.Objets.get(3));
+        //out.println(Objet.Objets);
+        //out.println(Algo.choixPivot(Objet.Objets));
+        Algo.triRapide(Objet.Objets);
+        out.println(Objet.Objets);
     }
 }
