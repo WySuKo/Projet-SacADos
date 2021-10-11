@@ -13,7 +13,7 @@ public class Glouton {
 
     public void Glouton(SacADos sac) {
         int somme = 0;
-        Collections.sort(Objet.Objets, new Comparateur()); // Objets = Arraylist static d'objets attrapé dans le fichier.txt
+        Collections.sort(Objet.Objets, new Comparateur()); // Objets = Arraylist static d'objets attrapés dans le fichier.txt
         for (int i = 0; i < Objet.Objets.size(); i++) {
             somme += Objet.Objets.get(i).getPoids();
             if (somme < sac.getPoidsMax()) {
@@ -36,7 +36,7 @@ public class Glouton {
     }
 
     public void repartition(ArrayList<Objet> Objets, Objet premier, Objet dernier, Objet p){
-        echanger(Objets, choixPivot(Objets), dernier);
+        echanger(Objet.Objets, choixPivot(Objets), dernier);
         int e = Objet.Objets.indexOf(premier);
         for (int i = 0; i < Objet.Objets.size() - 1; i++){
             if(Objet.Objets.get(i).getRapport() < dernier.getRapport()){

@@ -38,6 +38,7 @@ public class Main {
         //out.println(Objet.Objets);
         //out.println(Algo.choixPivot(Objet.Objets));
         Algo.triRapide(Objet.Objets);
-        out.println(Objet.Objets);
+        Algo.Glouton(SAC);
+        out.println(SAC.getObjets());
     }
 }
