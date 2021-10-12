@@ -16,7 +16,7 @@ public class Main {
         Dynamique Alg = new Dynamique();
         Scanner scan = null;
         try {
-            scan = new Scanner(new File("SacDynamique.txt"));
+            scan = new Scanner(new File("Items.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -29,7 +29,12 @@ public class Main {
         //Collections.sort(SAC.getObjets(), new Comparateur());
         //out.println(SAC.getObjets());
         //out.println(Objet.Objets);
-        Alg.AlgoDynamique(SAC);
-        out.println(SAC.toString());
+        //out.println(SAC.toString());
+        out.println(Objet.Objets);
+        //Algo.Glouton(SAC);
+        //Algo.partition(Objet.Objets, 0, Objet.Objets.size() - 1);
+        out.println(Objet.Objets);
+        Algo.Glouton(SAC);
+        out.println(Objet.Objets);
     }
 }
