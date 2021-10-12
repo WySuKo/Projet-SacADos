@@ -1,5 +1,11 @@
 package Sac;
 
+/**
+ * Classe permettannt la création de l'arbre
+ * @author Fabien Ribeiro, Axel Roche
+ * @version 1.0
+ * @since 2021-10
+ */
 public class ArbreObjets {
     private final ArbreObjets branchePrincipale;
     ArbreObjets brancheDroite;
