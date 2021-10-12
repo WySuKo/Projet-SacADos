@@ -1,29 +1,56 @@
 package Sac;
 
 public class ArbreObjets {
-    private Integer value;
-    private float borneInf;
-    private float borneSup;
+    private final ArbreObjets branchePrincipale;
     ArbreObjets brancheDroite;
     ArbreObjets brancheGauche;
+    private final Objet objet;
+    private int position;
+    private final int profondeur;
 
     public ArbreObjets(){
+        this.branchePrincipale = this;
+        this.profondeur = 0;
+        this.objet = null;
     }
 
-    public void insertion(Integer valeur){
-        if(this.value == null){
-            this.value = valeur;
-            this.brancheGauche = new ArbreObjets();
-            this.brancheDroite = new ArbreObjets();
-        }
-        else {
-            if (this.value <= valeur){
-                this.brancheDroite.insertion(valeur);
-            }
-            else{
-                this.brancheGauche.insertion(valeur);
-            }
-        }
+    public ArbreObjets(ArbreObjets racine,Objet obj,int pos){
+        this.branchePrincipale = racine;
+        this.objet = obj;
+        this.profondeur = branchePrincipale.profondeur +1;
+        this.position = pos;
     }
 
+    public void setBrancheDroite(Objet obj,int pos) {
+        this.brancheDroite = new ArbreObjets(brancheDroite,obj,pos);
+    }
+
+    public void setBrancheGauche() {
+        this.brancheGauche = new ArbreObjets(brancheGauche,objet,-1);
+    }
+
+    public ArbreObjets getBranchePrincipale() {
+        return branchePrincipale;
+    }
+
+    public ArbreObjets getBrancheDroite() {
+        return this.brancheDroite;
+    }
+
+    public ArbreObjets getBrancheGauche() {
+        return this.brancheGauche;
+    }
+
+    public Objet getObjet() {
+        return this.objet;
+    }
+
+
+    public int getPosition() {
+        return this.position;
+    }
+
+    public boolean getRacine() {
+        return this.profondeur == 0;
+    }
 }
