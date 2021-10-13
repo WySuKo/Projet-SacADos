@@ -9,11 +9,19 @@ import Sac.*;
  * @since 2021-10
  */
 public class Dynamique {
+    /**
+     * Constructeur de l'algorithme dynamique
+     */
     public Dynamique(){
 
     }
 
+    /**
+     * Méthode pour effectuer l'algorithme dynamique
+     * @param sac le sac qui aura été remplis par l'algorithme
+     */
     public void AlgoDynamique(SacADos sac){
+        //Matrice pour pouvoir stocker les valeurs et les poids de l'objets
         float matrice[][] = new float[Objet.Objets.size()][(int) sac.getPoidsMax()+1];
         for ( int j = 0; j < sac.getPoidsMax();j++) {
             if (Objet.Objets.get(0).getPoids() > j) {

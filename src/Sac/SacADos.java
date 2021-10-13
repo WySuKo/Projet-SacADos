@@ -3,7 +3,7 @@ package Sac;
 import java.util.*;
 
 /**
- * Classe qui pour la création de notre sac à dos
+ * Classe qui permet la création de notre sac à dos
  *
  * @author Fabien Ribeiro, Axel Roche
  * @version 1.0

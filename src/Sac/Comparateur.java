@@ -4,7 +4,7 @@ import Sac.*;
 import java.util.Comparator;
 
 /**
- * Methode de comparaison de 2 objets afin de trier l'arraylist
+ * Classe permettant la comparaison de 2 objets afin de trier l'arraylist
  * @author Fabien Ribeiro, Axel Roche
  * @version 1.0
  * @since 2021-10

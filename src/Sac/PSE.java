@@ -8,13 +8,31 @@ import Sac.*;
  * @since 2021-10
  */
 public class PSE {
-private float borneMin;
-private float borneMax;
+    /**
+     * La borne minimale qui nous sera nécessaire pour l'algorithme
+     */
+    private float borneMin;
 
-private ArbreObjets arbreOptimal;
+    /**
+     * La borne maximale qui nous sera nécessaire pour l'algorithme
+     */
+    private float borneMax;
+
+    /**
+     * L'arbre qui contiendra le chemin de l'arbre le plus optimal
+     */
+    private ArbreObjets arbreOptimal;
+
+    /**
+     * Constructeur de l'algorithme PSE
+     */
     public PSE(){
 
     }
+
+    /**
+     * Méthode qui permettra d'effectuer notre algorithme
+     */
     public void resoudre(){
 
     }
