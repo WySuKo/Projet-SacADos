@@ -33,8 +33,11 @@ public class Main {
         out.println(Objet.Objets);
         //Algo.Glouton(SAC);
         //Algo.partition(Objet.Objets, 0, Objet.Objets.size() - 1);
-        out.println(Objet.Objets);
+        //out.println(Objet.Objets);
+       // Algo.Glouton(SAC);
         Algo.Glouton(SAC);
         out.println(Objet.Objets);
+        out.println(SAC.toString());
+
     }
 }
