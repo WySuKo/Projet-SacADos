@@ -11,12 +11,14 @@ public class PSE {
     /**
      * La borne minimale qui nous sera nécessaire pour l'algorithme
      */
-    private float borneMin;
+    private float borneInf;
 
     /**
      * La borne maximale qui nous sera nécessaire pour l'algorithme
      */
-    private float borneMax;
+    private float borneSup;
+
+    private float poidsMaxSac;
 
     /**
      * L'arbre qui contiendra le chemin de l'arbre le plus optimal
@@ -35,5 +37,15 @@ public class PSE {
      */
     public void resoudre(){
 
+    }
+    public void creerArbreBinaire(ArbreObjets noeudABR, float borneSup, int pos){
+        noeudABR.setBrancheDroite(Objet.Objets.get(pos),pos);
+        noeudABR.setBrancheGauche();
+
+        if(noeudABR.getBrancheDroite().getValNoeud() >= borneInf &&
+                noeudABR.getBrancheDroite().getPoidsNoeud() <= this.poidsMaxSac){
+            this.arbreOptimal = noeudABR.brancheDroite;
+            this.borneInf = this.arbreOptimal.getValNoeud();
+        }
     }
 }

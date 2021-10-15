@@ -23,14 +23,18 @@ public class ArbreObjets {
     ArbreObjets brancheGauche;
 
     /**
-     * Les objets contenus dans la branche
+     * La valeur du noeud
      */
-    private final Objet objet;
+    private final float valNoeud;
 
+    /**
+     *
+     */
+    private final float poidsNoeud;
     /**
      * Position de l'objet dans l'arbre
      */
-    private int position;
+    private int posObj;
 
     /**
      * Profondeur de l'arbre
@@ -43,20 +47,23 @@ public class ArbreObjets {
     public ArbreObjets(){
         this.branchePrincipale = this;
         this.profondeur = 0;
-        this.objet = null;
+        this.valNoeud = 0;
+        this.poidsNoeud = 0;
     }
 
     /**
-     * Constructeur pour la créations des branches
-     * @param racine la racine père où sera initilisé les branches
-     * @param obj   l'objet qui sera contenu dans la branche
-     * @param pos position de l'objet dans la branche
+     * Constructeur permettant la création d'une branche
+      * @param racine le noeud parant de la branche
+     * @param poids le poids du noeud
+     * @param valeur la valeur du noeud
+     * @param pos la position de l'objet dans le noeud
      */
-    public ArbreObjets(ArbreObjets racine,Objet obj,int pos){
+    public ArbreObjets(ArbreObjets racine,float poids,float valeur,int pos){
         this.branchePrincipale = racine;
-        this.objet = obj;
+        this.poidsNoeud = poids;
+        this.valNoeud = valeur;
+        this.posObj = pos;
         this.profondeur = branchePrincipale.profondeur +1;
-        this.position = pos;
     }
 
     /**
@@ -65,14 +72,14 @@ public class ArbreObjets {
      * @param pos la position de l'objet dans le sac
      */
     public void setBrancheDroite(Objet obj,int pos) {
-        this.brancheDroite = new ArbreObjets(brancheDroite,obj,pos);
+        this.brancheDroite = new ArbreObjets(brancheDroite,poidsNoeud + obj.getPoids(),valNoeud + obj.getValeur(),pos);
     }
 
     /**
      * Modification de la branche gauche
      */
     public void setBrancheGauche() {
-        this.brancheGauche = new ArbreObjets(brancheGauche,objet,-1);
+        this.brancheGauche = new ArbreObjets(brancheGauche,poidsNoeud,valNoeud,-1);
     }
 
     /**
@@ -99,20 +106,13 @@ public class ArbreObjets {
         return this.brancheGauche;
     }
 
-    /**
-     * Récupère l'objet de la branche
-     * @return l'objet
-     */
-    public Objet getObjet() {
-        return this.objet;
-    }
 
     /**
      * Récupère la position
      * @return la position
      */
-    public int getPosition() {
-        return this.position;
+    public int getPosObj() {
+        return this.posObj;
     }
 
     /**
@@ -121,5 +121,13 @@ public class ArbreObjets {
      */
     public boolean getRacine() {
         return this.profondeur == 0;
+    }
+
+    public float getValNoeud() {
+        return valNoeud;
+    }
+
+    public float getPoidsNoeud() {
+        return poidsNoeud;
     }
 }
