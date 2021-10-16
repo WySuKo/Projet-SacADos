@@ -7,10 +7,23 @@ import java.util.ArrayList;
 
 import static java.lang.System.out;
 
+/**
+ * Classe permettant de faire l'algorithme Glouton
+ * @author Fabien Ribeiro, Axel Roche
+ * @version 1.0
+ * @since 2021-10
+ */
 public class Glouton {
+    /**
+     * Constructeur permettant d'initialiser l'algorithme
+     */
     public Glouton() {
     }
 
+    /**
+     * Algorithme glouton
+     * @param sac le sac à trier et remplir en fonction de l'algorithme
+     */
     public void Glouton(SacADos sac) {
         int somme = 0;
         //Collections.sort(Objet.Objets, new Comparateur()); // Objets = Arraylist static d'objets attrapés dans le fichier.txt
