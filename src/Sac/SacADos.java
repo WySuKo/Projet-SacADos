@@ -23,6 +23,8 @@ public class SacADos {
      */
     private String chemin;
 
+    private float poids;
+
 
     /**
      * Constructeur du sac à dos
@@ -73,6 +75,19 @@ public class SacADos {
      */
     public float getPoidsMax() {
         return poidsMax;
+    }
+
+    /**
+     *  Vide la liste d'objets du sac
+     *  Revient a vider l'arrayList Objets
+     */
+    public void viderSac() { this.Objets.clear(); }
+
+    public void ajouter(Objet s) {
+        if (s.getPoids() + this.poids <= this.poidsMax){
+            this.Objets.add(s);
+            this.poids += s.getPoids();
+        }
     }
 
     /**
