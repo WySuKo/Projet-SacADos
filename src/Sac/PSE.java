@@ -47,5 +47,8 @@ public class PSE {
             this.arbreOptimal = noeudABR.brancheDroite;
             this.borneInf = this.arbreOptimal.getValNoeud();
         }
+        if (pos < Objet.Objets.size() - 1 && noeudABR.getPoidsNoeud() < poidsMaxSac){
+            
+        }
     }
 }

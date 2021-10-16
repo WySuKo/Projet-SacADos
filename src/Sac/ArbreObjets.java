@@ -72,14 +72,14 @@ public class ArbreObjets {
      * @param pos la position de l'objet dans le sac
      */
     public void setBrancheDroite(Objet obj,int pos) {
-        this.brancheDroite = new ArbreObjets(brancheDroite,poidsNoeud + obj.getPoids(),valNoeud + obj.getValeur(),pos);
+        this.brancheDroite = new ArbreObjets(this,poidsNoeud + obj.getPoids(),valNoeud + obj.getValeur(),pos);
     }
 
     /**
      * Modification de la branche gauche
      */
     public void setBrancheGauche() {
-        this.brancheGauche = new ArbreObjets(brancheGauche,poidsNoeud,valNoeud,-1);
+        this.brancheGauche = new ArbreObjets(this,poidsNoeud,valNoeud,-1);
     }
 
     /**
