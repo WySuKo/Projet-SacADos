@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="AAV:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AAV_jar</output-path>
+    <root id="root">
+      <element id="archive" name="AAV.jar">
+        <element id="module-output" name="AAV" />
+      </element>
+    </root>
+  </artifact>
+</component>

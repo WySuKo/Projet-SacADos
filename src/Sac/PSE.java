@@ -7,7 +7,7 @@ import Sac.*;
  * @version 1.0
  * @since 2021-10
  */
-public class PSE {
+public class PSE implements Resolution {
     /**
      * La borne minimale qui nous sera nécessaire pour l'algorithme
      */
@@ -33,6 +33,7 @@ public class PSE {
     /**
      * Méthode qui permettra d'effectuer notre algorithme
      */
+    @Override
     public void resoudre(SacADos sac){
         float borneSup = borneInf = 0;
 

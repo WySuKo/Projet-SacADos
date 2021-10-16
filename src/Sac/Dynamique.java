@@ -1,12 +1,11 @@
     package Sac;
     import Sac.*;
 
-    public class Dynamique {
+    public class Dynamique implements Resolution{
         public Dynamique(){
-
         }
-
-        public void AlgoDynamique(SacADos sac){
+        @Override
+        public void resoudre(SacADos sac){
             float matrice[][] = new float[Objet.Objets.size()][(int) sac.getPoidsMax()+1];
             for ( int j = 0; j < sac.getPoidsMax();j++) {
                 if (Objet.Objets.get(0).getPoids() > j) {

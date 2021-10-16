@@ -7,11 +7,12 @@ import java.util.ArrayList;
 
 import static java.lang.System.out;
 
-public class Glouton {
+public class Glouton implements Resolution{
     public Glouton() {
     }
 
-    public void Glouton(SacADos sac) {
+    @Override
+    public void resoudre(SacADos sac) {
         int somme = 0;
         //Collections.sort(Objet.Objets, new Comparateur()); // Objets = Arraylist static d'objets attrapés dans le fichier.txt
         Quicksort(Objet.Objets, 0, Objet.Objets.size() - 1);
