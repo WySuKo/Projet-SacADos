@@ -53,7 +53,7 @@ public class ArbreObjets {
 
     /**
      * Constructeur permettant la création d'une branche
-      * @param racine le noeud parant de la branche
+     * @param racine le noeud parant de la branche
      * @param poids le poids du noeud
      * @param valeur la valeur du noeud
      * @param pos la position de l'objet dans le noeud
