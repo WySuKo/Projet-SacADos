@@ -20,7 +20,8 @@ public class Glouton implements Resolution{
         for (int i = 0; i < Objet.Objets.size(); i++) {
             somme += Objet.Objets.get(i).getPoids();
             if (somme < sac.getPoidsMax()) {
-                sac.getObjets().add(Objet.Objets.get(i));
+                //sac.getObjets().add(Objet.Objets.get(i));
+                sac.ajouter(Objet.Objets.get(i));
             } else {
                 somme -= Objet.Objets.get(i).getPoids();
             }

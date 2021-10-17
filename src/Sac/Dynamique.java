@@ -6,7 +6,8 @@
         }
         @Override
         public void resoudre(SacADos sac){
-            float matrice[][] = new float[Objet.Objets.size()][(int) sac.getPoidsMax()+1];
+            //float matrice[][] = new float[Objet.Objets.size()][(int) sac.getPoidsMax()+1];
+            float matrice[][] = new float[Objet.Objets.size()][Math.round(sac.getPoidsMax()) + 1];
             for ( int j = 0; j < sac.getPoidsMax();j++) {
                 if (Objet.Objets.get(0).getPoids() > j) {
                     matrice[0][j] = 0;
@@ -19,7 +20,7 @@
                     if (Objet.Objets.get(i).getPoids() > j) {
                         matrice[i][j] = matrice[i - 1][j];
                     } else {
-                        matrice[i][j] = Math.max(matrice[i - 1][j], matrice[i - 1][(int) (j - Objet.Objets.get(i).getPoids())] + Objet.Objets.get(i).getValeur());
+                        matrice[i][j] = Math.max(matrice[i - 1][j], matrice[i - 1][Math.round(j - Objet.Objets.get(i).getPoids())] + Objet.Objets.get(i).getValeur());
                     }
                 }
             }
@@ -35,7 +36,8 @@
                 }
                 j = j - (int)(Objet.Objets.get(i).getPoids());
                 if (j>=0){
-                    sac.getObjets().add(Objet.Objets.get(i));
+                    //sac.getObjets().add(Objet.Objets.get(i));
+                    sac.ajouter(Objet.Objets.get(i));
                 }
                 i--;
             }
