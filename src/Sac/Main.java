@@ -52,7 +52,7 @@ public class Main {
 
         try {
             scan = new Scanner(new File(args[0]));
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e)  {
             e.printStackTrace();
             out.println("Fichier qui n'existe pas");
         }
