@@ -23,7 +23,7 @@ public class Main {
         Scanner scan = null;
         try {
             scan = new Scanner(new File(args[0]));
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e)  {
             e.printStackTrace();
         }
         while (scan.hasNextLine()) {
