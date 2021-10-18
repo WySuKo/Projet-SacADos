@@ -14,12 +14,17 @@ public class Main {
      * @param args les arguments qui seront taper en entrée
      */
     public static void main(String[] args) {
-        out.print("Veuillez saisir les arguments du programme :\n$>resoudre-sac-a-dos ");
+
         GestionMain main = new GestionMain();
+        /** Prend les valeurs nécessaires :
+         * chemin poidsMax méthode
+         */
         Scanner debut = new Scanner(System.in);
+        out.print("Veuillez saisir les arguments du programme :\n$>resoudre-sac-a-dos ");
         String str = debut.nextLine();
-        String[] ok = str.split(" ");
-        args = ok.clone();
+        String[] arguments = str.split(" ");
+        //on copie les arguments
+        args = arguments.clone();
         main.gestionArgument(args);
     }
 }

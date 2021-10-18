@@ -36,7 +36,7 @@ public class PSE implements Resolution {
         //On initialise les bornes à 0
         float borneSup = borneInf = 0;
 
-        //On ajoute la somme des valeurs de tout les objets présent dans la liste
+        //On fait la somme des valeurs de tout les objets présent dans la liste
         for(Objet obj : Objet.Objets){
             borneSup += obj.getValeur();
         }
@@ -46,7 +46,7 @@ public class PSE implements Resolution {
         arbreOptimal = racine;
         //Création de l'arbre binaire le plus optimal
         creerArbreBinaire(sac, racine,borneSup,1);
-        //Ajoute de l'arbre optimal dans le sac
+        //Ajoute des objets de l'arbre optimal dans le sac
         ajouterDansSac(arbreOptimal,sac);
     }
 

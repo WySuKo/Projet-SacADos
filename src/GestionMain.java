@@ -12,12 +12,23 @@ import java.util.concurrent.TimeUnit;
 
 import static java.lang.System.out;
 
+/**
+ * Classe permettant de gérer le main
+ * @author Fabien Ribeiro, Axel Roche
+ * @version 1.0
+ * @since 2021-10
+ */
 public class GestionMain {
+    /**
+     * méthode permettant de gérer les exeptions retenus
+     * @param args les arguments mit en entrée
+     */
     public void gestionArgument(String args[]){
 
         String messageErreur = null;
         Scanner scan = null;
 
+        //prends le tableau d'argument et envois un message d'erreur en fonction de l'argument en entrée
         if (args.length < 3) {
             messageErreur += "Arguments Manquants : ";
             switch (args.length) {
@@ -55,13 +66,13 @@ public class GestionMain {
             e.printStackTrace();
             out.println("Fichier qui n'existe pas");
         }
-
+        //le scanner pour les objets donnée dans le .txt
         while (scan.hasNextLine()) {
             String line = scan.nextLine();
             String[] caracs = line.split(";");
             Objet.Objets.add(new Objet(caracs[0], Float.parseFloat(caracs[1]), Float.parseFloat(caracs[2])));
         }
-
+        //switch pour choisir la méthode de résolution du sac
         switch(args[2].toLowerCase()) {
             case "gloutonne":
                 Glouton a = new Glouton();
