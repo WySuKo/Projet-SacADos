@@ -28,9 +28,10 @@ public class SacADos {
      * Le chemin que parcours le compilateur pour le sac
      */
     private String chemin;
-
+    /**
+     * Le poids actuel du sac à dos
+     */
     private float poids;
-
 
     /**
      * Constructeur du sac à dos
