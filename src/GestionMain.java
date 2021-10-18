@@ -14,7 +14,7 @@ import static java.lang.System.out;
 
 public class GestionMain {
     public void gestionArgument(String args[]){
-        Date D1 = new Date();
+
         String messageErreur = null;
         Scanner scan = null;
 
@@ -82,8 +82,5 @@ public class GestionMain {
                 System.out.println("Aucun algorithme spécifié.");
                 break;
         }
-        Date D2 = new Date();
-        long dateDiff = D2.getTime() - D1.getTime();
-        System.out.println("\nTemps pris pour résoudre le sac: " + TimeUnit.MILLISECONDS.convert(dateDiff, TimeUnit.MILLISECONDS) + "ms");
     }
 }
