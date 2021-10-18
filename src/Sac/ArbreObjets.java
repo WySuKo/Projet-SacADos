@@ -12,15 +12,16 @@ public class ArbreObjets {
      */
     private final ArbreObjets branchePrincipale;
 
+
     /**
      * Branche droite de l'arbre, équivaut au fils droit de son père
      */
-    ArbreObjets brancheDroite;
+    private ArbreObjets brancheDroite;
 
     /**
      * Branche gauche de l'arbre, équivaut au fils gauche de son père
      */
-    ArbreObjets brancheGauche;
+    private ArbreObjets brancheGauche;
 
     /**
      * La valeur du noeud

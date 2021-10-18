@@ -1,21 +1,20 @@
-package Sac;
+import Algorithme.Dynamique;
+import Algorithme.Glouton;
+import Algorithme.PSE;
+import Sac.Objet;
+import Sac.SacADos;
 
-import java.awt.geom.Arc2D;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.Date;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-import static java.lang.System.*;
+import static java.lang.System.out;
 
-/**
- * Classe pour l'application du programme
- * @author Fabien Ribeiro, Axel Roche
- * @version 1.0
- * @since 2021-10
- */
-public class Main {
-    public static void main(String[] args) {Date D1 = new Date();
+public class GestionMain {
+    public void gestionArgument(String args[]){
+        Date D1 = new Date();
         String messageErreur = null;
         Scanner scan = null;
 

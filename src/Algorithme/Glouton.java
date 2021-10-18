@@ -1,30 +1,23 @@
-package Sac;
-import Sac.*;
+package Algorithme;
+import Algorithme.Resolution;
+import Sac.Objet;
+import Sac.SacADos;
 
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.ArrayList;
 
-import static java.lang.System.out;
-
-public class Glouton implements Resolution{
+public class Glouton implements Resolution {
     public Glouton() {
     }
 
     @Override
     public void resoudre(SacADos sac) {
-        int somme = 0;
         //Collections.sort(Objet.Objets, new Comparateur()); // Objets = Arraylist static d'objets attrapés dans le fichier.txt
         Quicksort(Objet.Objets, 0, Objet.Objets.size() - 1);
         Collections.reverse(Objet.Objets);
         for (int i = 0; i < Objet.Objets.size(); i++) {
-            somme += Objet.Objets.get(i).getPoids();
-            if (somme < sac.getPoidsMax()) {
                 //sac.getObjets().add(Objet.Objets.get(i));
                 sac.ajouter(Objet.Objets.get(i));
-            } else {
-                somme -= Objet.Objets.get(i).getPoids();
-            }
         }
     }
 

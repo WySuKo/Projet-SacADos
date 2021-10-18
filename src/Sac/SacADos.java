@@ -1,6 +1,12 @@
 package Sac;
 
+import Algorithme.Dynamique;
+import Algorithme.Glouton;
+import Algorithme.PSE;
+
 import java.util.*;
+
+import static java.lang.System.out;
 
 /**
  * Classe qui permet la création de notre sac à dos
@@ -106,4 +112,5 @@ public class SacADos {
         }
         return s.toString();
     }
+
 }

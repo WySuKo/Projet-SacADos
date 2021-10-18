@@ -1,4 +1,4 @@
-    package Sac;
+    package Algorithme;
     import Sac.*;
 
     public class Dynamique implements Resolution{

@@ -1,5 +1,8 @@
-package Sac;
-import Sac.*;
+package Algorithme;
+import Algorithme.Resolution;
+import Sac.ArbreObjets;
+import Sac.Objet;
+import Sac.SacADos;
 
 /**
  * Classe pour la création de l'algorithme PSE
@@ -54,7 +57,7 @@ public class PSE implements Resolution {
 
         if(noeudABR.getBrancheDroite().getValNoeud() >= borneInf &&
                 noeudABR.getBrancheDroite().getPoidsNoeud() <= sac.getPoidsMax()){
-            this.arbreOptimal = noeudABR.brancheDroite;
+            this.arbreOptimal = noeudABR.getBrancheDroite();
             this.borneInf = this.arbreOptimal.getValNoeud();
         }
         if (pos < Objet.Objets.size() - 1 && noeudABR.getPoidsNoeud() < sac.getPoidsMax()){
