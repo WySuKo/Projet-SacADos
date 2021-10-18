@@ -9,6 +9,10 @@ import static java.lang.System.out;
  * @since 2021-10
  */
 public class Main {
+    /**
+     * Méthode qui permet de lancer l'application
+     * @param args les arguments qui seront taper en entrée
+     */
     public static void main(String[] args) {
         out.print("Veuillez saisir les arguments du programme :\n$>resoudre-sac-a-dos ");
         GestionMain main = new GestionMain();

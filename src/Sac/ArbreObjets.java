@@ -1,7 +1,7 @@
 package Sac;
 
 /**
- * Classe permettannt la création de l'arbre
+ * Classe permettannt la création de l'arbre binaire
  * @author Fabien Ribeiro, Axel Roche
  * @version 1.0
  * @since 2021-10
@@ -68,7 +68,7 @@ public class ArbreObjets {
     }
 
     /**
-     * Modification de la branche droite afin de lui faire contenir les objets
+     * Créer la branche droite en ajoutant un objet supplémentaire
      * @param obj l'objet qui sera contenu dans la branche
      * @param pos la position de l'objet dans le sac
      */
@@ -77,7 +77,7 @@ public class ArbreObjets {
     }
 
     /**
-     * Modification de la branche gauche
+     *  Créer la branche gauche
      */
     public void setBrancheGauche() {
         this.brancheGauche = new ArbreObjets(this,poidsNoeud,valNoeud,-1);
@@ -109,7 +109,7 @@ public class ArbreObjets {
 
 
     /**
-     * Récupère la position
+     * Récupère la position de l'objet
      * @return la position
      */
     public int getPosObj() {
@@ -117,17 +117,25 @@ public class ArbreObjets {
     }
 
     /**
-     * Récupère la racine de l'arbre
+     * Vérifie si c'est la racine de l'arbre
      * @return la racine
      */
     public boolean getRacine() {
         return this.profondeur == 0;
     }
 
+    /**
+     * La valeur du noeud
+     * @return la valeur du noeud
+     */
     public float getValNoeud() {
         return valNoeud;
     }
 
+    /**
+     * Le poids du noeud
+     * @return le poids du noeud
+     */
     public float getPoidsNoeud() {
         return poidsNoeud;
     }

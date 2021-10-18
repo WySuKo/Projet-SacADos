@@ -55,6 +55,7 @@ public class GestionMain {
             e.printStackTrace();
             out.println("Fichier qui n'existe pas");
         }
+
         while (scan.hasNextLine()) {
             String line = scan.nextLine();
             String[] caracs = line.split(";");
